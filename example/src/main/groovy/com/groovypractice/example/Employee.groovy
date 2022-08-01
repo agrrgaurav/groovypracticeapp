@@ -2,11 +2,21 @@ package com.groovypractice.example
 
 class Employee {
     private String name;
-    private String age;
+    private int age;
+    private int id;
 
-    Employee(String name,int age) {
+    Employee(int id,String name,int age) {
         this.name = name
         this.age = age
+        this.id=id;
+    }
+
+    int getId() {
+        return id
+    }
+
+    void setId(int id) {
+        this.id = id
     }
 
     String getName() {
@@ -17,11 +27,11 @@ class Employee {
         this.name = name
     }
 
-    String getAge() {
+    int getAge() {
         return age
     }
 
-    void setAge(String age) {
+    void setAge(int age) {
         this.age = age
     }
 }
