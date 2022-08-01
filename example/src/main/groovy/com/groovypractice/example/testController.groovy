@@ -7,8 +7,9 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class testController {
 
-    @GetMapping("/emp/{name}")
-    Employee getEmployee(@PathVariable String name){
-             new Employee(name,name.size()*10);
+    @GetMapping("/emp/{id}/{name}/{age}")
+    Employee getEmployee(@PathVariable int id , @PathVariable String name , @PathVariable int age){
+        new Employee(id,name,age);
     }
+
 }
